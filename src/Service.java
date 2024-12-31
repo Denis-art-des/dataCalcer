@@ -71,6 +71,8 @@ public class Service {
     public static void runController(){
         Controller crl = new Controller(selectedModelName);
         crl.readDataFrom(dataPath + "/" + selectedDataName + ".txt");
+        crl.runModel();
+        crl.getResultsAsTsv();
     }
 
     public JPanel CalculatedDataPanel() {
